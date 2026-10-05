@@ -2,6 +2,11 @@
   const root=document.querySelector('.invite');
   if(!root)return;
   document.body.classList.add('invitation-locked');
+  const musicBtn = document.getElementById('musicBtn');
+
+  const audio = new Audio('../../assets/wedding-song.mp3');
+  audio.loop = true;
+  audio.volume = 0.45;
 
   /* Opening animation */
   const opening=document.getElementById('opening');
@@ -12,6 +17,8 @@
     invitationOpened=true;
     opening.classList.add('opening-closing');
     document.body.classList.remove('invitation-locked');
+    audio.play().catch(() => {});
+    musicBtn?.classList.add('playing');
     setTimeout(()=>opening.classList.add('opened'),1100);
   }
   openInvitation?.addEventListener('click',openWeddingInvitation);
@@ -164,5 +171,24 @@
   document.querySelectorAll('[data-rsvp]').forEach(b=>b.addEventListener('click',()=>{const text=encodeURIComponent('Wedding RSVP — Atrivarada & Renuka\n\nI would like to respond: '+b.dataset.rsvp+'\n\nInvitation: '+location.href);location.href='https://wa.me/?text='+text}));
   document.getElementById('calendarBtn')?.addEventListener('click',()=>{const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//InviteAura//Wedding//EN','BEGIN:VEVENT','DTSTART:20261121T212600','DTEND:20261121T232600','SUMMARY:Atrivarada & Renuka — Wedding / Muhurtham','LOCATION:Vijayawada','DESCRIPTION:Wedding invitation for Atrivarada & Renuka.','END:VEVENT','BEGIN:VEVENT','DTSTART:20261205T190000','DTEND:20261205T220000','SUMMARY:Atrivarada & Renuka — Reception','LOCATION:Vijayawada','DESCRIPTION:Wedding reception for Atrivarada & Renuka.','END:VEVENT','END:VCALENDAR'].join('\r\n');const blob=new Blob([ics],{type:'text/calendar'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Atrivarada-Renuka-Wedding.ics';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)});
   document.getElementById('directionsBtn')?.addEventListener('click',()=>{window.open('https://www.google.com/maps/search/?api=1&query=Vijayawada','_blank','noopener')});
-  const musicBtn=document.getElementById('musicBtn');let audio=null;musicBtn?.addEventListener('click',()=>{if(!audio){showToast('Add your wedding music file to enable music');return}audio.paused?audio.play():audio.pause()});
+//  const musicBtn=document.getElementById('musicBtn');let audio=null;musicBtn?.addEventListener('click',()=>{if(!audio){showToast('Add your wedding music file to enable music');return}audio.paused?audio.play():audio.pause()});
+
+
+musicBtn?.addEventListener('click', async () => {
+  try {
+    if (audio.paused) {
+      await audio.play();
+      musicBtn.textContent = '♫';
+      musicBtn.classList.add('playing');
+      showToast('Wedding music playing ♫');
+    } else {
+      audio.pause();
+      musicBtn.textContent = '♪';
+      musicBtn.classList.remove('playing');
+      showToast('Music paused');
+    }
+  } catch (error) {
+    showToast('Tap again to start the music');
+  }
+});
 })();
