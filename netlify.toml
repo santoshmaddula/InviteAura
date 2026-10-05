@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+
+# Keep the public invitation URL stable.
+[[redirects]]
+  from = "/i/atrivarada-renuka"
+  to = "/i/atrivarada-renuka/index.html"
+  status = 200
