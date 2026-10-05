@@ -51,11 +51,8 @@ $("#photoInput").addEventListener("change",e=>{
  const r=new FileReader();r.onload=()=>{state.photoData=r.result;$("#photoPreview").innerHTML=`<img src="${state.photoData}" alt="Selected couple photo">`;updatePreview()};r.readAsDataURL(f);
 });
 $("#publishBtn").addEventListener("click",()=>{
- const slug="atrivarada-renuka";
- const url=`${window.location.origin}/i/${slug}`;
- $("#generated").innerHTML=`<strong>Invitation URL:</strong><br><a class="share-url" href="${url}" target="_blank" rel="noopener">${url}</a><br><button class="secondary small share-copy" type="button">Copy link</button> <a class="primary small share-open" href="${url}" target="_blank" rel="noopener">Open invitation</a>`;
- const copy=$(".share-copy");
- copy.addEventListener("click",async()=>{try{await navigator.clipboard.writeText(url);copy.textContent="Copied ✓";}catch(e){window.prompt("Copy invitation URL:",url);}});
+ const slug=(($("#groom").value+"-"+$("#bride").value).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,""))||"my-invitation";
+ $("#generated").innerHTML=`<strong>Demo invitation ID:</strong> ${slug}<br><small>Production URL: yourbrand.com/i/${slug}</small>`;
 });
 $("#resetBtn").addEventListener("click",()=>{
  const vals={groom:"Atrivarada Sri Bhaskara Sharma",bride:"Renuka",date:"2026-11-21",city:"Vijayawada",opening:"With the blessings of our families, we invite you to celebrate our sacred union.",marriageDate:"2026-11-21",marriageTime:"9:56 PM",marriageVenue:"Vijayawada",receptionDate:"2026-12-05",receptionTime:"7:00 PM onwards",receptionVenue:"Vijayawada"};

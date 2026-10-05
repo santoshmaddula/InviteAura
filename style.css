@@ -25,4 +25,28 @@ body{background:#eee8dc}
 .phone-screen{position:relative}.preview-gopuram{width:105px;height:78px;object-fit:contain;margin-top:-18px;opacity:.92}.preview-diya{width:40px;height:50px;object-fit:contain;margin-top:15px}.preview-kolam{width:60px;height:60px;object-fit:contain;margin:14px 0;opacity:.6}
 .theme-maroon{background:radial-gradient(circle at 50% 12%,#96383c,#4b161d 55%,#290a10)}.theme-ivory{background:linear-gradient(135deg,#fff9ed,#e8ddc6);color:#382f27}.theme-ivory .p-kicker,.theme-ivory .p-date,.theme-ivory .p-city,.theme-ivory .p-script,.theme-ivory .p-temple{color:#8d6527}.theme-ivory .p-line{background:#a67a35}
 @media(max-width:850px){.hero-thoranam img{height:75px}.heritage{padding:70px 20px}.heritage h2{font-size:43px}.heritage-motifs{gap:20px}.heritage-motifs img:nth-child(2){width:150px}}
-.share-url{display:inline-block;margin:8px 0 12px;color:#356b59;font-weight:700;word-break:break-all}.share-copy{margin-right:5px}
+
+/* InviteAura premium emerald landing-page theme */
+:root{--ink:#f5efe2;--muted:#c5c0b3;--line:#2d5147;--green:#d8b36a;--deep:#031f1a;--gold:#e3c27a;--cream:#fff7e5;--soft:#0a332b}
+body{background:var(--deep);color:var(--ink)}
+.topbar{background:rgba(3,31,26,.94);border-bottom:1px solid rgba(216,179,106,.22);backdrop-filter:blur(12px)}
+.brand{color:var(--cream)}
+nav a{color:#d4d0c4}
+.nav-cta,.primary{background:linear-gradient(135deg,#e5c47f,#c89d50);color:#102b23;box-shadow:0 8px 24px rgba(216,179,106,.16)}
+.secondary{border-color:#44645a;background:#0b382f;color:var(--cream)}
+.hero{background:radial-gradient(circle at 75% 25%,rgba(216,179,106,.13),transparent 28%),radial-gradient(circle at 20% 0%,rgba(31,105,83,.35),transparent 34%),linear-gradient(135deg,#031f1a,#063d32 62%,#022b24);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:url('assets/thoranam.svg');background-repeat:repeat-x;background-position:top center;background-size:520px auto;opacity:.13;pointer-events:none}.hero>*{position:relative;z-index:1}
+.eyebrow{color:var(--gold)}.hero p{color:#d3cec0}.trust{color:#b9b4a8}
+.section,.builder-section{color:var(--ink)}
+.section{background:#062b24}.section:nth-of-type(odd){background:#031f1a}
+.section h2,.builder-section h2{color:var(--cream)}
+.pill{background:#0b382f;border-color:#3b5e53;color:#d4d0c4}
+.template-card{background:#092f27;border-color:#31574c}.template-info h3{color:var(--cream)}.template-info p{color:#aaa99e}.use-template{color:var(--gold)}
+.builder-section{background:linear-gradient(180deg,#0b382f,#062b24)}
+.editor{background:#082a23;border-color:#31574c}.editor-tabs{border-color:#31574c}.tab{background:#103c32;color:#bfc4bb}.tab.active{background:#d8b36a;color:#17362c}.editor label{color:#c3c2b8}.editor input,.editor textarea,.editor select{background:#06251f;border-color:#42655b;color:#f5efe2}.event-editor{border-color:#31574c}.event-editor>b{color:var(--gold)}.helper{color:#a7aaa1}.photo-preview{border-color:#527167;color:#9fa8a2}.generated{color:var(--gold)}
+.preview-label{color:#c9c5b9}.preview-controls button{background:#0a332b;border-color:#527167;color:var(--cream)}
+.pricing{background:#031f1a}.price{background:#082a23;border-color:#31574c}.price h3{color:var(--cream)}.price p{color:#b8b8ad}.price span{color:#c6aa70}.price.featured{border-color:var(--gold)}
+footer{background:#021914;color:#e9e1d1;border-top:1px solid #24483e}
+.heritage{background:radial-gradient(circle at 50% 30%,#145642,#062b24 58%,#031f1a);border-top:1px solid #2c5147;border-bottom:1px solid #2c5147}
+.gold-eyebrow{color:var(--gold)}.heritage-content h2{color:var(--cream)}.heritage-content p{color:#c7c5ba}
+@media(max-width:820px){.topbar{padding:0 18px;gap:14px}.topbar nav{display:none}.hero{grid-template-columns:1fr;min-height:auto;padding:72px 24px 65px}.hero h1{font-size:clamp(52px,16vw,76px)}.hero p{font-size:16px}.hero-showcase{margin-top:35px}.show-phone{width:275px}.section,.builder-section{padding:65px 22px}.section-head{display:block}.section h2,.builder-section h2{font-size:42px}.template-grid,.price-grid,.builder{grid-template-columns:1fr}.template-art{height:340px}.builder{gap:24px}}
