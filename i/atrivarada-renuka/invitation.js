@@ -16,6 +16,68 @@
     const d=Math.floor(diff/86400000),h=Math.floor(diff/3600000)%24,m=Math.floor(diff/60000)%60,s=Math.floor(diff/1000)%60;
     [['days',d],['hours',h],['minutes',m],['seconds',s]].forEach(([id,val])=>{const el=document.getElementById(id);if(el)el.textContent=String(val).padStart(2,'0')});
   }
+  /* Gallery Slider */
+  const gallerySlides = document.querySelectorAll('.gallery-slide');
+  const galleryDots = document.querySelectorAll('.gallery-dots button');
+  const galleryPrev = document.getElementById('galleryPrev');
+  const galleryNext = document.getElementById('galleryNext');
+
+  let galleryIndex = 0;
+
+  function showGallerySlide(index) {
+      if (!gallerySlides.length) return;
+
+      galleryIndex =
+          (index + gallerySlides.length) % gallerySlides.length;
+
+      gallerySlides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === galleryIndex);
+      });
+
+      galleryDots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === galleryIndex);
+      });
+  }
+
+  galleryPrev?.addEventListener('click', () => {
+      showGallerySlide(galleryIndex - 1);
+  });
+
+  galleryNext?.addEventListener('click', () => {
+      showGallerySlide(galleryIndex + 1);
+  });
+
+  galleryDots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+          showGallerySlide(index);
+      });
+  });
+  let galleryTouchStartX = 0;
+  let galleryTouchEndX = 0;
+
+  const galleryTrack = document.querySelector('.gallery-track');
+
+  galleryTrack?.addEventListener('touchstart', (e) => {
+      galleryTouchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  galleryTrack?.addEventListener('touchend', (e) => {
+      galleryTouchEndX = e.changedTouches[0].screenX;
+
+      const swipeDistance =
+          galleryTouchEndX - galleryTouchStartX;
+
+      if (Math.abs(swipeDistance) < 50) return;
+
+      if (swipeDistance < 0) {
+          showGallerySlide(galleryIndex + 1);
+      } else {
+          showGallerySlide(galleryIndex - 1);
+      }
+  }, { passive: true });
+//  setInterval(() => {
+//      showGallerySlide(galleryIndex + 1);
+//  }, 4000);
   updateCountdown();setInterval(updateCountdown,1000);
   function petals(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;const box=document.querySelector('.petals');for(let i=0;i<16;i++){const p=document.createElement('span');p.className='petal';p.style.left=(Math.random()*100)+'%';p.style.setProperty('--drift',(Math.random()*180-90)+'px');p.style.animationDuration=(6+Math.random()*7)+'s';p.style.animationDelay=(Math.random()*5)+'s';box.appendChild(p)}}petals();
   const shareData={title:'Atrivarada & Renuka — Wedding Invitation',text:'You are warmly invited to celebrate the wedding of Atrivarada & Renuka.',url:location.href};

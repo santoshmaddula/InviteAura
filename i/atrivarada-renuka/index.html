@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#021e19"><meta name="description" content="Wedding invitation of Atrivarada Sri Bhaskara Sharma & Renuka — Vijayawada, 21 November 2026.">
+<meta name="theme-color" content="#021e19"><meta name="description" content="Wedding invitation of Atrivarada & Renuka — Vijayawada, 21 November 2026.">
 <meta property="og:title" content="Atrivarada & Renuka — Wedding Invitation"><meta property="og:description" content="You are warmly invited to celebrate the wedding of Atrivarada & Renuka."><meta property="og:type" content="website">
 <title>Atrivarada & Renuka — Wedding Invitation</title>
 <link rel="stylesheet" href="../../style.css"><link rel="stylesheet" href="invitation.css">
@@ -14,7 +14,7 @@
     <section class="screen hero reveal visible" data-section="home" id="home">
       <div class="frame"></div><img class="gopuram" src="../../assets/gopuram.svg" alt="Temple gopuram">
       <div class="kicker">WITH THE BLESSINGS OF OUR FAMILIES</div><div class="monogram">A <i>&amp;</i> R</div>
-      <div class="names">Atrivarada Sri Bhaskara Sharma<br><span class="script">&amp;</span><br>Renuka</div>
+      <div class="names">Atrivarada<br><span class="script">&amp;</span><br>Renuka</div>
       <div class="goldline"></div><div class="date">21 · 11 · 2026</div><div class="city">Vijayawada</div>
       <button class="hint" data-go="story">Tap to begin the celebration ✦</button><div class="scroll-cue">SCROLL TO EXPLORE ↓</div>
     </section>
@@ -39,7 +39,44 @@
     </section>
 
     <section class="screen reveal" data-section="gallery" id="gallery">
-      <div class="kicker">A MOMENT TO REMEMBER</div><div class="gallery"><button aria-label="Open couple photograph"><img src="../../assets/couple-photo.jpg" alt="Atrivarada and Renuka"></button><button aria-label="Open couple photograph"><img src="../../assets/couple-photo.jpg" alt="Atrivarada and Renuka"></button></div>
+      <div class="kicker">A MOMENT TO REMEMBER</div>
+<!--      <div class="gallery"><button aria-label="Open couple photograph"><img src="../../assets/couple-photo2.jpg" alt="Atrivarada and Renuka"></button><button aria-label="Open couple photograph"><img src="../../assets/couple-photo4.jpg" alt="Atrivarada and Renuka"></button><button aria-label="Open couple photograph"><img src="../../assets/couple-photo3.jpg" alt="Atrivarada and Renuka"></button></div>-->
+
+      <div class="gallery-slider" id="gallerySlider">
+
+        <button class="gallery-arrow gallery-prev" id="galleryPrev" aria-label="Previous photo">
+          ‹
+        </button>
+
+        <div class="gallery-track">
+
+          <div class="gallery-slide active">
+            <img src="../../assets/couple-photo2.jpg" alt="Atrivarada and Renuka">
+          </div>
+
+          <div class="gallery-slide">
+            <img src="../../assets/couple-photo3.jpg" alt="Atrivarada and Renuka">
+          </div>
+
+          <div class="gallery-slide">
+            <img src="../../assets/couple-photo4.jpg" alt="Atrivarada and Renuka">
+          </div>
+
+        </div>
+
+        <button class="gallery-arrow gallery-next" id="galleryNext" aria-label="Next photo">
+          ›
+        </button>
+
+        <div class="gallery-dots" id="galleryDots">
+          <button class="active" aria-label="Photo 1"></button>
+          <button aria-label="Photo 2"></button>
+          <button aria-label="Photo 3"></button>
+        </div>
+
+      </div>
+
+      <p class="note">SWIPE OR TAP TO EXPLORE ✦</p>
       <p class="note">TAP A PHOTO TO VIEW</p>
     </section>
 
