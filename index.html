@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#042d25">
+<title>InviteAura — Premium Indian Wedding Invitations</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home"><span>✦</span> InviteAura</a>
+  <nav><a href="#templates">Templates</a><a href="#create">Create</a><a href="#pricing">Pricing</a></nav>
+  <button class="nav-cta" id="startBtn">Create Invitation</button>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">PREMIUM INDIAN WEDDING INVITATIONS</div>
+    <h1>Your story.<br><em>Beautifully invited.</em></h1>
+    <p>Build cinematic, mobile-first wedding invitations with your photos, rituals, events, countdown and RSVP — ready to share on WhatsApp.</p>
+    <div class="hero-actions"><button class="primary" id="heroCreate">Create an Invitation ✦</button><a class="secondary" href="#templates">Explore Templates</a></div>
+    <div class="trust"><span>✦</span> Telugu &amp; South Indian inspired designs · <span>✦</span> WhatsApp-ready · <span>✦</span> QR-ready</div>
+  </div>
+  <div class="thoranam hero-thoranam"><img src="assets/thoranam.svg" alt="Mango leaf thoranam"></div><div class="hero-showcase">
+    <div class="glow"></div>
+    <div class="show-phone">
+      <div class="show-screen"><div class="gopuram-mini"><img src="assets/gopuram.svg" alt="South Indian temple gopuram"></div>
+        <div class="temple-top">❧  ॐ  ❧</div>
+        <div class="show-kicker">WITH THE BLESSINGS OF OUR FAMILIES</div>
+        <div class="show-monogram">A <i>&amp;</i> R</div>
+        <div class="show-names">Atrivarada<br><span>&amp;</span> Renuka</div>
+        <div class="gold-line"></div>
+        <div class="show-date">21 · 11 · 2026</div>
+        <div class="show-place">Vijayawada</div>
+        <div class="mandapam">⌁ ❖ ⌁</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="templates" class="section">
+  <div class="section-head"><div><div class="eyebrow">TEMPLATE GALLERY</div><h2>Designed for celebrations that matter.</h2></div><span class="pill">Cinematic starter collection</span></div>
+  <div class="template-grid">
+    <article class="template-card selected" data-template="emerald">
+      <div class="template-art emerald"><img class="template-gopuram" src="assets/gopuram.svg" alt=""><div class="mini-kolam"><img src="assets/kolam.svg" alt=""></div><div class="arch">❧ ॐ ❧</div><div class="art-kicker">WITH THE BLESSINGS OF OUR FAMILIES</div><div class="art-names">Atrivarada<br><i>&amp;</i> Renuka</div><div class="art-date">21 · 11 · 2026</div><div class="art-place">Vijayawada</div></div>
+      <div class="template-info"><div><h3>Emerald Temple</h3><p>Deep green, antique gold &amp; South Indian elegance</p></div><button class="use-template" data-template="emerald">Use template</button></div>
+    </article>
+    <article class="template-card" data-template="maroon">
+      <div class="template-art maroon"><div class="hanging-bells"><img src="assets/bell.svg" alt=""><img src="assets/bell.svg" alt=""></div><div class="arch">ॐ</div><div class="art-kicker">A SACRED BEGINNING</div><div class="art-names">Your<br><i>&amp;</i> Forever</div><div class="art-date">YOUR DATE</div><div class="art-place">Your City</div></div>
+      <div class="template-info"><div><h3>Royal Kalyanam</h3><p>Maroon, gold and traditional festive warmth</p></div><button class="use-template" data-template="maroon">Use template</button></div>
+    </article>
+    <article class="template-card" data-template="ivory">
+      <div class="template-art ivory"><div class="mini-diya"><img src="assets/diya.svg" alt=""></div><div class="arch">✦</div><div class="art-kicker">A NEW CHAPTER</div><div class="art-names">Your<br><i>&amp;</i> Story</div><div class="art-date">YOUR DATE</div><div class="art-place">Your City</div></div>
+      <div class="template-info"><div><h3>Ivory Heritage</h3><p>Minimal editorial styling with Indian details</p></div><button class="use-template" data-template="ivory">Use template</button></div>
+    </article>
+  </div>
+</section>
+
+<section class="heritage">
+  <div class="heritage-bg"></div>
+  <div class="heritage-content">
+    <div class="heritage-motifs">
+      <img src="assets/diya.svg" alt="Traditional brass diya">
+      <img src="assets/gopuram.svg" alt="Temple gopuram">
+      <img src="assets/bell.svg" alt="Temple bell">
+    </div>
+    <div class="eyebrow gold-eyebrow">SOUTH INDIAN WEDDING AESTHETIC</div>
+    <h2>From the <em>temple bells</em><br>to the wedding mandapam.</h2>
+    <p>Traditional visual details inspired by South Indian celebrations — mango-leaf thoranam, temple architecture, brass diyas, bells, kolam and antique-gold ornamentation.</p>
+    <div class="heritage-kolam"><img src="assets/kolam.svg" alt="Kolam pattern"></div>
+  </div>
+</section>
+
+<section id="create" class="builder-section">
+  <div class="section-head"><div><div class="eyebrow">INVITATION BUILDER</div><h2>Create the story.</h2></div><span class="pill" id="templatePill">Emerald Temple</span></div>
+  <div class="builder">
+    <div class="editor">
+      <div class="editor-tabs">
+        <button class="tab active" data-tab="details">Couple</button><button class="tab" data-tab="events">Events</button><button class="tab" data-tab="media">Photos &amp; Music</button><button class="tab" data-tab="style">Style</button><button class="tab" data-tab="publish">Publish</button>
+      </div>
+
+      <div class="tab-panel active" id="detailsPanel">
+        <label>Groom name<input id="groom" value="Atrivarada Sri Bhaskara Sharma"></label>
+        <label>Bride name<input id="bride" value="Renuka"></label>
+        <label>Muhurtham date<input id="date" type="date" value="2026-11-21"></label>
+        <label>City<input id="city" value="Vijayawada"></label>
+        <label>Opening message<textarea id="opening">With the blessings of our families, we invite you to celebrate our sacred union.</textarea></label>
+      </div>
+
+      <div class="tab-panel" id="eventsPanel">
+        <div class="event-editor"><b>Marriage / Muhurtham</b><label>Date<input id="marriageDate" type="date" value="2026-11-21"></label><label>Time<input id="marriageTime" value="9:56 PM"></label><label>Venue<input id="marriageVenue" value="Vijayawada"></label></div>
+        <div class="event-editor"><b>Reception</b><label>Date<input id="receptionDate" type="date" value="2026-12-05"></label><label>Time<input id="receptionTime" value="7:00 PM onwards"></label><label>Venue<input id="receptionVenue" value="Vijayawada"></label></div>
+      </div>
+
+      <div class="tab-panel" id="mediaPanel">
+        <label>Couple photograph<input id="photoInput" type="file" accept="image/*"></label>
+        <div class="photo-preview" id="photoPreview">Photo preview</div>
+        <label>Background music<input id="musicInput" type="file" accept="audio/*"></label>
+        <div class="helper">The browser can preview uploaded media locally. Production storage will upload it securely after the customer publishes.</div>
+      </div>
+
+      <div class="tab-panel" id="stylePanel">
+        <label>Invitation mood<select id="mood"><option value="emerald">Emerald &amp; Antique Gold</option><option value="maroon">Royal Maroon &amp; Gold</option><option value="ivory">Ivory Heritage</option></select></label>
+        <label>Opening animation<select id="animation"><option>Temple reveal</option><option>Elegant fade</option><option>Photo cinematic</option></select></label>
+        <label>Language<select id="language"><option>English</option><option>English + Telugu</option><option>Telugu</option></select></label>
+      </div>
+
+      <div class="tab-panel" id="publishPanel">
+        <div class="publish-box"><div class="publish-icon">✦</div><h3>Preview your invitation</h3><p>In the production SaaS, publishing creates a permanent URL, QR code and share card after checkout.</p><button class="primary" id="publishBtn">Generate Demo Invitation</button><div class="generated" id="generated"></div></div>
+      </div>
+
+      <div class="editor-footer"><button class="secondary small" id="resetBtn">Reset</button><button class="primary small" id="nextTab">Continue →</button></div>
+    </div>
+
+    <div class="preview-area">
+      <div class="preview-label">LIVE MOBILE PREVIEW</div>
+      <div class="phone">
+        <div class="phone-screen" id="phoneScreen">
+          <div class="preview-page cover-page">
+            <img class="preview-gopuram" src="assets/gopuram.svg" alt=""><div class="p-temple">❧ ॐ ❧</div><div class="p-kicker">WITH THE BLESSINGS OF OUR FAMILIES</div>
+            <div class="p-monogram">A <i>&amp;</i> R</div>
+            <div class="p-names"><span id="pGroom">Atrivarada Sri Bhaskara Sharma</span><br><i>&amp;</i><br><span id="pBride">Renuka</span></div>
+            <div class="p-line"></div><div class="p-date" id="pDate">21 · 11 · 2026</div><div class="p-city" id="pCity">Vijayawada</div>
+            <button class="preview-open" id="previewOpen">Open Invitation ✦</button>
+          </div>
+          <div class="preview-page story-page">
+            <div class="p-kicker">A SACRED BEGINNING</div><div class="story-photo" id="pPhoto">Your<br>Couple<br>Photo</div>
+            <div class="p-script">Together with our families</div><p id="pOpening">With the blessings of our families, we invite you to celebrate our sacred union.</p>
+          </div>
+          <div class="preview-page events-page">
+            <div class="p-kicker">OUR CELEBRATIONS</div><h3>Marriage</h3><p><b id="pMarriageDate">21 November 2026</b><br><span id="pMarriage">9:56 PM</span><br><span id="pMarriageVenue">Vijayawada</span></p>
+            <div class="event-divider">✦</div><h3>Reception</h3><p><b id="pReceptionDate">5 December 2026</b><br><span id="pReception">7:00 PM onwards</span><br><span id="pReceptionVenue">Vijayawada</span></p>
+          </div>
+          <div class="preview-page final-page">
+            <div class="p-kicker">SAVE THE DATE</div><div class="p-script">21 · 11 · 2026</div><div class="countdown"><span><b id="dd">--</b><small>DAYS</small></span><span><b id="hh">--</b><small>HRS</small></span><span><b id="mm">--</b><small>MIN</small></span></div><div class="p-line"></div><p>Your presence and blessings will make our celebration even more special.</p><img class="preview-kolam" src="assets/kolam.svg" alt=""><div class="p-script">Atrivarada &amp; Renuka</div></div>
+        </div>
+      </div>
+      <div class="preview-controls"><button id="previewPrev">‹</button><div id="previewDots"></div><button id="previewNext">›</button></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="section pricing"><div class="section-head"><div><div class="eyebrow">MONETIZATION</div><h2>A simple path to revenue.</h2></div></div><div class="price-grid">
+<article class="price"><span>STARTER</span><h3>Free</h3><strong>₹0</strong><p>Basic templates<br>Preview<br>Watermark</p><button class="secondary choose-plan">Start free</button></article>
+<article class="price featured"><span>POPULAR</span><h3>Premium</h3><strong>₹499</strong><p>Premium design<br>No watermark<br>Photos + music<br>RSVP + QR<br>Shareable URL</p><button class="primary choose-plan">Choose Premium</button></article>
+<article class="price"><span>DESIGNER</span><h3>Custom</h3><strong>₹1,999+</strong><p>Custom design<br>Advanced animation<br>Personal support</p><button class="secondary choose-plan">Enquire</button></article>
+</div></section>
+</main>
+<footer><strong>InviteAura</strong><span>Digital invitations made beautiful.</span></footer>
+<script src="app.js"></script>
+</body>
+</html>
