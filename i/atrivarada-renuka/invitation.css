@@ -239,3 +239,51 @@ body.presentation-mode .screen {
 body.presentation-mode .screen.active-scene {
   position: relative;
 }
+
+
+/* FINAL FIX: Hide all bottom navigation and scene indicators */
+.bottom-nav,
+#sceneProgress,
+.scene-progress,
+.scene-dots,
+.scene-controls .scene-progress {
+  display: none !important;
+}
+
+/* Mobile: show the complete couple photo */
+#story .photo-wrap {
+  width: min(88vw, 380px) !important;
+  height: auto !important;
+  aspect-ratio: auto;
+  max-height: 68svh;
+  overflow: hidden;
+  margin: 24px auto;
+  flex-shrink: 0;
+}
+
+#story .photo-wrap img {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  max-height: 68svh;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+/* Keep the story scene usable on smaller phones */
+@media (max-width: 600px) {
+  #story.screen {
+    padding: 35px 16px !important;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  #story .photo-wrap {
+    width: min(88vw, 340px) !important;
+    max-height: 60svh;
+  }
+
+  #story .photo-wrap img {
+    max-height: 60svh;
+  }
+}
