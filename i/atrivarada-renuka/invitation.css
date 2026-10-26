@@ -296,3 +296,47 @@ body.presentation-mode .screen.active-scene {
 #sceneProgress {
   display: none !important;
 }
+/* Continue arrow: visible only on the active photo collage scene */
+#gallery .next-scene-btn {
+  position: absolute;
+  right: 18px;
+  bottom: calc(22px + env(safe-area-inset-bottom, 0px));
+  z-index: 20;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  background: rgba(3, 28, 24, 0.92);
+  color: var(--gold);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 3px 14px #0005;
+  animation: nextPulse 1.8s ease-in-out infinite;
+}
+
+#gallery:not(.active-scene) .next-scene-btn {
+  display: none !important;
+}
+
+#gallery .next-scene-btn:focus-visible {
+  outline: 2px solid var(--cream);
+  outline-offset: 3px;
+}
+
+@keyframes nextPulse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+@media (max-width: 600px) {
+  #gallery .next-scene-btn {
+    right: 14px;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    width: 38px;
+    height: 38px;
+  }
+}

@@ -200,3 +200,7 @@ musicBtn?.addEventListener('click', async () => {
   }
 });
 })();
+document.getElementById('nextSceneBtn')
+  ?.addEventListener('click', () => {
+    showScene(sceneIndex + 1, true);
+  });
