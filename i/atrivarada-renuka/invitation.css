@@ -231,3 +231,11 @@ body.presentation-mode .screen {
 .screen[data-section="rsvp"] {
   padding-bottom: 100px;
 }
+body.presentation-mode .screen {
+  position: absolute;
+  inset: 0 auto auto 0;
+}
+
+body.presentation-mode .screen.active-scene {
+  position: relative;
+}
