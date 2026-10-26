@@ -42,19 +42,27 @@
   const scenePlay=document.getElementById('scenePlay');
   const sceneProgress=document.getElementById('sceneProgress');
 
-  if(sceneProgress){
-    sections.forEach((_,i)=>{
-      const dot=document.createElement('span');
-      dot.className='scene-dot'+(i===0?' active':'');
-      dot.setAttribute('role','button');
-      dot.setAttribute('tabindex','0');
-      dot.setAttribute('aria-label','Go to scene '+(i+1));
-      dot.addEventListener('click',()=>showScene(i));
-      dot.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();showScene(i)}});
-      sceneProgress.appendChild(dot);
-    });
-  }
-  const sceneDots=[...document.querySelectorAll('.scene-dot')];
+//  if(sceneProgress){
+//    sections.forEach((_,i)=>{
+//      const dot=document.createElement('span');
+//      dot.className='scene-dot'+(i===0?' active':'');
+//      dot.setAttribute('role','button');
+//      dot.setAttribute('tabindex','0');
+//      dot.setAttribute('aria-label','Go to scene '+(i+1));
+//      dot.addEventListener('click',()=>showScene(i));
+//      dot.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();showScene(i)}});
+//      sceneProgress.appendChild(dot);
+//    });
+//  }
+//  const sceneDots=[...document.querySelectorAll('.scene-dot')];
+
+// Hide and disable the bottom scene navigation.
+const sceneControls = document.querySelector('.scene-controls');
+if (sceneControls) {
+  sceneControls.remove();
+}
+
+const sceneDots = [];
 
   function resetSceneTimer(){
     clearTimeout(sceneTimer);
