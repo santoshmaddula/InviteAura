@@ -287,3 +287,12 @@ body.presentation-mode .screen.active-scene {
     max-height: 60svh;
   }
 }
+/* Hide the bottom scene slider and its navigation controls */
+.scene-controls,
+.scene-progress,
+.scene-dot,
+.presentation-nav,
+.bottom-nav,
+#sceneProgress {
+  display: none !important;
+}
