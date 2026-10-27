@@ -1,5 +1,5 @@
-```html
-<!doctype html>
+
+<!doctype>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -83,7 +83,7 @@
 
     <!-- Scene 3: Events -->
     <section class="screen reveal" data-section="events" id="events">
-      <div class="kicker">OUR CELEBRATIONS</div>
+      <div class="kicker">We cordially invite you to join Our Celebrations</div>
 
       <div class="event-grid">
         <article class="event">
@@ -111,6 +111,15 @@
             7:00 PM onwards<br>
             Visakhapatnam
           </p>
+          <!-- Reception buttons -->
+          <div class="actions">
+            <button class="action" id="receptionCalendarBtn" type="button">
+              Add  to Calendar
+            </button>
+            <button class="action" id="receptionDirectionsBtn" type="button">
+              Directions
+            </button>
+          </div>
         </article>
       </div>
     </section>
@@ -181,7 +190,7 @@
       <p class="note">SWIPE OR TAP TO EXPLORE ✦</p>
       <p class="note">TAP A PHOTO TO VIEW</p>
 
-      <!-- NEW: Continue to the next invitation scene -->
+      <!-- Continue from Photos to RSVP -->
       <button class="next-scene-btn"
               id="nextSceneBtn"
               type="button"
@@ -262,20 +271,8 @@
 
 </div>
 
+<!-- Main invitation logic, including the Photos-to-RSVP arrow handler -->
 <script src="invitation.js"></script>
-
-<!-- NEW: Make the collage arrow advance to the RSVP scene -->
-<script>
-  document.getElementById('nextSceneBtn')?.addEventListener('click', () => {
-    const rsvpButton = document.querySelector('[data-go="rsvp"]');
-    if (rsvpButton) {
-      rsvpButton.click();
-    } else {
-      document.getElementById('rsvp')?.classList.add('active-scene');
-    }
-  });
-</script>
 
 </body>
 </html>
-```
